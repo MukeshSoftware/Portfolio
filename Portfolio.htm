@@ -1,0 +1,307 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Mukesh Kr Das</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  </head>
+  <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    Link with href
+  </a> -->
+  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Button with data-bs-target
+  </button> -->
+  
+  <body style="background-size:cover;">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">More</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div> -->
+        <div class="d-grid gap-2">
+          <a href='/gallery' class="btn btn-primary" type="button">Gallery</a>
+          <button class="btn btn-primary" type="button">Posts</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-nav">
+      <ul>
+        <li><a href="/" class="nav-link scrollto active"><i class = "material-icons">home</i> </a></li>
+        <li><a href="/about" class="nav-link scrollto"><i class = "material-symbols-outlined">person</i> </a></li>
+        <li><a href="/imprints" class="nav-link scrollto"><i class = "material-symbols-outlined">article</i> </a></li>
+        <li><a href="Resume Mukesh .pdf"><i class = "material-symbols-outlined">school</i> </a></li>
+        <li><a href="https://mukeshsoftware.github.io/iClock/indax.htm"><i class = "material-symbols-outlined">class</i> </a></li>
+        <li><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class = "material-icons">menu</i> </a></li>
+      </ul>
+    </div>
+    <script>
+      $(document).ready(function() {
+        // Get the current URL
+        var currentLocation = window.location.href;
+    
+        // Loop through each navigation item and check if it matches the current URL or section
+        $('#mobile-nav ul li a').each(function() {
+          var link = $(this).attr('href');
+    
+          // Check if the link is the home URL
+          if (link === '/') {
+          } else if (currentLocation.includes(link)) {
+            // For other links, activate if it's part of the URL
+            $(this).find('i').removeClass('material-symbols-outlined');
+            $(this).find('i').addClass('material-icons');
+            $('#mobile-nav ul li a[href="/"]').find('i').removeClass('material-icons');
+            $('#mobile-nav ul li a[href="/"]').find('i').addClass('material-symbols-outlined');
+          }
+        });
+      });
+    </script>
+    
+    
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+  
+      <nav id="navbar" class="navbar nav-menu">
+        <ul>
+          <li><a href="/" class="nav-link scrollto active"><i class = "material-icons">home</i> <span>Home</span></a></li>
+          <li><a href="about.html" class="nav-link scrollto"><i class="material-icons">person</i> <span>About Me</span></a></li>
+          <li><a href="/imprints" class="nav-link scrollto"><i class = "material-icons">article</i> <span>Imprints</span></a></li>
+          <li><a href="Resume Mukesh .pdf" class="nav-link scrollto"><i class = "material-icons">school</i> <span>Academics & Exprience</span></a></li>
+          <li><a href="/portfolio" class="nav-link scrollto"><i class="material-symbols-outlined">class</i> <span>Skills & Projects</span></a></li>
+          
+          <li><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class = "material-icons">menu</i>  <span>More</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+  
+    </header><!-- End Header -->
+    <script>
+      $(document).ready(function() {
+        // Get the current URL
+        var currentLocation = window.location.href;
+      
+        // Loop through each navigation item and check if it matches the current URL or section
+        $('#navbar ul li a').each(function() {
+          var link = $(this).attr('href');
+          
+          // Check if the link is the home URL
+          if (link === '/') {
+            // Check if it's the base URL and activate accordingly
+          } else if (currentLocation.includes(link)) {
+            // For other links, activate if it's part of the URL
+            $(this).addClass('active');
+            $('#navbar ul li a[href="/"]').removeClass('active');
+          }
+        });
+      });
+    </script>
+    
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top " style="background-color: #cdcbc5cf;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Mukesh Kumar Das</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons">
+              search
+              </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/"><i class = "material-icons">home</i> <span class="align-top">Home</span></a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/blog"><i class = "material-icons">article</i> <span class="align-top">Imprints</span></a>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class = "material-icons">view_week</i> <span class="align-top">More</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#"><i class = "material-icons">school</i> <span class="align-top">Academic Background & Expertise</span></a></li>
+                  <li><a class="dropdown-item" href="#"><i class = "material-icons">article</i> <span class="align-top">Projects</span></a></li>
+                  <li><a class="dropdown-item" href="#"><i class = "material-icons">image</i> <span class="align-top">Image Gallery</span></a></li>
+                  <li><a class="dropdown-item" href="#"><i class = "material-icons">reviews</i> <span class="align-top">Testimonials/Recommendations</span></a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"><i class = "material-icons">info</i> <span class="align-top">About Me</span></a></li>
+                </ul>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link disabled" href="https://mukeshsoftware.github.io/iClock/indax.htm" tabindex="-1" aria-disabled="true">Embark on an Exciting Journey with Me</a>
+              </li>
+            </ul>
+            <form class="d-flex" action='/imprints/search/' method="POST"> <!-- Replace 'search_results' with your URL name -->
+              <input type="hidden" name="csrfmiddlewaretoken" value="MTJ1nPdJvEfZIdPeajDhPnKd31q5GeeUOVcBnc6n0l55yHvhJ6mOYRquhMcJVbpA">
+              <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          
+          </div>
+        </div>
+      </nav>
+      
+
+ <!-- COVER -->
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button>
+  <i class="bi bi-list mobile-nav-toggle d-lg-none">AAA</i> -->
+  <!-- Add this HTML for mobile navigation -->
+
+    <div class="cover">
+        <img class="cover-profile" src="Pic.png">
+        <h1>Mukesh Kumar Das</h1>
+        <p style="color: rgb(244, 244, 244);"><strong>"Embracing the convergence of creativity, technology, and spirituality to inspire transformative experiences"</strong></p>
+        <div style="font-size: x-large; text-align: center;">
+          <a href="#"><i class="fa fa-instagram"></i></a> 
+          <a href="https://twitter.com/IAMukeshKr"><i class="fa fa-twitter"></i></a>  
+          <a href="https://www.linkedin.com/in/mukesh-kd/"><i class="fa fa-linkedin"></i></a>  
+          <!-- <a href="#"><i class="fa fa-facebook"></i></a>   -->
+        </div>
+        <!-- <div style="text-align: center;" >
+            <a class="contact-button" href="/about" style="border-radius: 10px;">About ME</a>
+        </div> -->
+  
+        <div class="cover-contact">
+            <a href="mailto:abhaynarayanbairagi@gmail.com?subject=Contact%20from%20abhaynarayanbairagi.me">amukesh.jsr18@gmail.com</a>
+            <a href="tel:+916207934416">+91 6207934416</a>
+        </div>
+    </div>
+  
+    <!-- GRAY 1 -->
+    <div class="section gray-section-1">
+        <div class="section-title">
+            <h2>About This Website</h2>
+          </div></div>
+  
+    <!-- WHITE -->
+
+    <div class="section" style="overflow: auto;">
+      <div class="container">
+      <p class="fst-italic" style="text-align: center;"><b>"This digital space is a reflection of my diverse expertise and creative passions. It combines my portfolio, insights, academic/professional details, visual gallery, and project showcase. It's designed to immerse visitors in my journey, offering a holistic view of my skills, experiences, and creative drive. Explore my professional odyssey, engage with my work, and discover the essence of who I am. Welcome!"</b></p>
+
+            </div>
+          </div>
+        
+    </div>
+
+    <!-- GRAY 2 -->
+    <div class="section gray-section-2">
+        <section id="facts" class="facts">
+            <div class="container" data-aos="fade-up">
+      
+              <div class="section-title">
+                <h2>Explore The Sections</h2>
+                <p>Explore a diverse fusion of my professional prowess and creative insights all in one place. This multifaceted website encapsulates my journey through the lens of portfolios, insights, and personal imprints.</p>
+              </div>
+      
+              <div class="row">
+                <div class="col-lg-3 col-md-6">
+                  <div style="background-color:#F4F4F4" class="count-box">
+                      <i class="material-icons">person</i>
+                      <span style="font-size:27px;" class="purecounter">About me</span>
+                      <p>Get to know me better! This section shares insights into my passion for technology, my insatiable curiosity, and how I craft innovative solutions by combining creativity and technical expertise.</p>
+                  </div>
+              </div>
+              
+              <div class="col-lg-3 col-md-6">
+                <div style="background-color:#F4F4F4;" class="count-box">
+                    <i class="material-icons">class</i>
+                    <span style="font-size:27px;" class="purecounter">Skills & Projects</span>
+                    <p>Explore my diverse skill set and projects! This area showcases my skills across various domains and highlights the projects I've worked on, demonstrating my ability to deliver innovative solutions.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+              <div style="background-color:#F4F4F4" class="count-box">
+                  <i class="material-icons">article</i>
+                  <span style="font-size:27px;" class="purecounter">Imprints</span>
+                  <p>Discover the impact I strive to make! This section encapsulates a world where creativity, literature, and spirituality converge. Explore my artistic expressions, literary adventures, and spiritual insights. Each imprint invites you to introspect, inspiring new dimensions of thought and emotion.</p>
+              </div>
+          </div> 
+              <div class="col-lg-3 col-md-6">
+                <div style="background-color:#F4F4F4" class="count-box">
+                    <i class="material-icons">school</i>
+                    <span style="font-size:27px;" class="purecounter">Academics & Experience</span>
+                    <p>Learn about my academic journey and professional milestones! This section delves into my educational background, key achievements, and valuable experiences that have shaped my expertise and growth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div style="background-color:#F4F4F4" class="count-box">
+                  <i class="material-icons">image</i>
+                  <span style="font-size:27px;" class="purecounter">Gallery</span>
+                  <p>Explore the memories</p>
+              </div>
+          </div>
+              </div>
+      
+            </div>
+          </section><!-- End Facts Section -->
+      
+      
+    </div>
+
+    <script >
+        // JavaScript to toggle mobile navigation display
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNav = document.querySelector('#mobile-nav');
+
+mobileNavToggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('mobile-nav-active');
+});
+
+    </script>
+
+      <footer id="footer">
+        <div class="container">
+          <h3>Mukesh Kumar Das</h3>
+          <p>You can connect me at..</p>
+          <div class="social-links">
+            <a href="https://twitter.com/IAMukeshKr" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/mukeshkr.das.37/" class="facebook"><i class="fa fa-medium"></i></a>
+            <a href="https://www.instagram.com/dmukeshkr/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-play"></i></a>
+            <a href="https://www.linkedin.com/in/mukesh-kd/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCWQ55c8y7uuGQ81Bfo27ULQ" class="linkedin"><i class="fa fa-youtube"></i></a>
+          </div>
+          <div class="copyright">
+            &copy; Copyright <strong><span>MukeshSoftware</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: [license-url] -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+            Designed by <a href="/">Mukesh Kumar Das</a>
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+  </body>
+</html>
