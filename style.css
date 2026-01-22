@@ -214,139 +214,122 @@ padding:30px;
    FLASH CERTIFICATE CARDS
 ================================ */
 
-.flash-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 25px;
+.cert-container {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.flash-card {
-  perspective: 1200px;
+/* Perspective */
+
+.cert-card {
+perspective:1200px;
 }
 
-.flash-inner {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
+/* Flip Box */
+
+.cert-inner {
+position:relative;
+width:100%;
+height:320px;
+transform-style:preserve-3d;
+transition:0.8s;
 }
 
-.flash-card:hover .flash-inner {
-  transform: rotateY(180deg);
+/* Hover Flip */
+
+.cert-card:hover .cert-inner {
+transform:rotateY(180deg);
 }
 
-.flash-front,
-.flash-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+/* Front & Back */
+
+.cert-front,
+.cert-back {
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:15px;
+padding:20px;
+box-shadow:0px 8px 20px rgba(0,0,0,0.6);
 }
 
 /* FRONT */
 
-.flash-front {
-  background: linear-gradient(135deg,#020617,#1e3a8a);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.cert-front {
+background:linear-gradient(135deg,#020617,#1e3a8a);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-.flash-front h3 {
-  color: #38bdf8;
+.cert-front h3 {
+color:#38bdf8;
+margin-bottom:8px;
 }
 
-.flash-front span {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #94a3b8;
+.cert-front span {
+font-size:13px;
+color:#cbd5f5;
 }
 
 /* BACK */
 
-.flash-back {
-  background: linear-gradient(135deg,#0f172a,#020617);
-  transform: rotateY(180deg);
-  text-align: center;
+.cert-back {
+background:linear-gradient(135deg,#0f172a,#020617);
+transform:rotateY(180deg);
+text-align:center;
 }
 
-.flash-back img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 2px solid #38bdf8;
+.cert-back img {
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+border:2px solid #38bdf8;
+margin-bottom:10px;
 }
 
-.flash-back h4 {
-  color: #38bdf8;
+.cert-back h4 {
+color:#38bdf8;
+margin-bottom:5px;
 }
 
-/* ===============================
-   CONTACT
-================================ */
-
-#contact form {
-  max-width: 500px;
-  margin: auto;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: none;
-}
-
-#contact button {
-  width: 100%;
-  padding: 10px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* ===============================
-   FOOTER
-================================ */
+/* ================= FOOTER ================= */
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  border-top: 1px solid #1e293b;
+background:#020617;
+text-align:center;
+padding:15px;
+border-top:1px solid #1e293b;
 }
 
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
+/* ================= MOBILE ================= */
 
 @media(max-width:768px) {
 
 nav {
-  flex-direction: column;
-}
-  
-#home {
-  text-align: center;
+flex-direction:column;
+gap:10px;
 }
 
-.flash-inner {
-  height: 280px;
+.stats-container {
+flex-direction:column;
 }
 
-.flash-back img {
-  height: 140px;
+.hero, section {
+padding:30px;
+}
+
+.cert-inner {
+height:280px;
+}
+
+.cert-back img {
+height:140px;
 }
 
 }
