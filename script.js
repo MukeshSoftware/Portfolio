@@ -128,3 +128,56 @@ alert("Message Failed!");
 });
 
 });
+
+// Certificate Slider
+
+let slideIndex = 0;
+const slider = document.querySelector(".testimonial-slider");
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex > 2) slideIndex = 0;
+  slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) slideIndex = 2;
+  slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+// Auto Slide
+
+setInterval(() => {
+  nextSlide();
+}, 4000);
+
+
+// Certificate Popup
+
+function openPopup(img) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = img;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+
+// Scroll Animation
+
+const certSection = document.getElementById("certificates");
+
+window.addEventListener("scroll", () => {
+
+  const pos = certSection.getBoundingClientRect().top;
+  const screen = window.innerHeight / 1.3;
+
+  if (pos < screen) {
+    certSection.classList.add("show");
+  }
+
+});
+
+
