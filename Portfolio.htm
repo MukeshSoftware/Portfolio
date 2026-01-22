@@ -146,28 +146,57 @@ Graduate Engineer Trainee at Tata Advanced Systems Ltd with strong expertise in 
 </section>
 
 <!-- Certificates -->
+<!-- Certifications Slider -->
 <section id="certificates">
-<h2>Certifications & Training</h2>
+  <h2>Certifications & Professional Training</h2>
 
-<div class="cert-container">
+  <div class="slider-wrapper">
 
-<div class="cert-card">
-<h3>TATA Advanced Systems Ltd</h3>
-<p>Graduate Engineer Trainee Program</p>
-</div>
+    <button class="slide-btn left" onclick="prevSlide()">❮</button>
 
-<div class="cert-card">
-<h3>TASL Internship</h3>
-<p>Supply Chain & Manufacturing Operations</p>
-</div>
+    <div class="testimonial-slider">
 
-<div class="cert-card">
-<h3>NIT Jamshedpur</h3>
-<p>Friction Stir Welding Research Project</p>
-</div>
+      <div class="testimonial-card">
+        <p>
+          "Completed Graduate Engineer Trainee Program at Tata Advanced Systems Ltd with exposure to aerospace manufacturing and supply chain operations."
+        </p>
+        <h3>TATA Advanced Systems Ltd</h3>
+        <span>Executive GET Program</span>
+        <button class="view-btn" onclick="openPopup('cert1.jpg')">View Certificate</button>
+      </div>
 
-</div>
+      <div class="testimonial-card">
+        <p>
+          "Completed 2-month internship focused on composite manufacturing, production planning and FMEA-based improvement."
+        </p>
+        <h3>TASL Internship</h3>
+        <span>Supply Chain Internship</span>
+        <button class="view-btn" onclick="openPopup('cert2.jpg')">View Certificate</button>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Research certification on Friction Stir Welding optimization project from NIT Jamshedpur."
+        </p>
+        <h3>NIT Jamshedpur</h3>
+        <span>Academic Research</span>
+        <button class="view-btn" onclick="openPopup('cert3.jpg')">View Certificate</button>
+      </div>
+
+    </div>
+
+    <button class="slide-btn right" onclick="nextSlide()">❯</button>
+
+  </div>
 </section>
+
+
+<!-- Certificate Popup -->
+<div id="popup">
+  <span onclick="closePopup()">×</span>
+  <img id="popup-img">
+</div>
+
 
 <!-- Contact -->
 <section id="contact">
@@ -187,5 +216,6 @@ Graduate Engineer Trainee at Tata Advanced Systems Ltd with strong expertise in 
 
 </body>
 </html>
+
 
 
