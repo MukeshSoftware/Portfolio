@@ -145,51 +145,73 @@ Graduate Engineer Trainee at Tata Advanced Systems Ltd with strong expertise in 
 <div class="project-container" id="projectList"></div>
 </section>
 
-<!-- Certificates -->
-<!-- Certifications Slider -->
+<!-- Certifications Flash Cards With Images -->
 <section id="certificates">
   <h2>Certifications & Professional Training</h2>
 
-  <div class="slider-wrapper">
+  <div class="flash-container">
 
-    <button class="slide-btn left" onclick="prevSlide()">❮</button>
+    <!-- Card 1 -->
+    <div class="flash-card">
+      <div class="flash-inner">
 
-    <div class="testimonial-slider">
+        <!-- FRONT -->
+        <div class="flash-front">
+          <h3>TATA Advanced Systems Ltd</h3>
+          <p>Executive GET Program</p>
+          <span>Click to View</span>
+        </div>
 
-      <div class="testimonial-card">
-        <p>
-          "Completed Graduate Engineer Trainee Program at Tata Advanced Systems Ltd with exposure to aerospace manufacturing and supply chain operations."
-        </p>
-        <h3>TATA Advanced Systems Ltd</h3>
-        <span>Executive GET Program</span>
-        <button class="view-btn" onclick="openPopup('cert2.jpg')">View Certificate</button>
+        <!-- BACK -->
+        <div class="flash-back">
+          <img src="cert1.jpg" alt="GET Certificate">
+          <h4>Graduate Engineer Trainee</h4>
+          <p>Supply Chain & Aerospace Manufacturing</p>
+        </div>
+
       </div>
-
-      <div class="testimonial-card">
-        <p>
-          "Completed 2-month internship focused on composite manufacturing, production planning and FMEA-based improvement."
-        </p>
-        <h3>TASL Internship</h3>
-        <span>Supply Chain Internship</span>
-        <button class="view-btn" onclick="openPopup('cert2.jpg')">View Certificate</button>
-      </div>
-
-      <div class="testimonial-card">
-        <p>
-          "Research certification on Friction Stir Welding optimization project from NIT Jamshedpur."
-        </p>
-        <h3>NIT Jamshedpur</h3>
-        <span>Academic Research</span>
-        <button class="view-btn" onclick="openPopup('cert3.jpg')">View Certificate</button>
-      </div>
-
     </div>
 
-    <button class="slide-btn right" onclick="nextSlide()">❯</button>
+    <!-- Card 2 -->
+    <div class="flash-card">
+      <div class="flash-inner">
+
+        <div class="flash-front">
+          <h3>TASL Internship</h3>
+          <p>Supply Chain Internship</p>
+          <span>Click to View</span>
+        </div>
+
+        <div class="flash-back">
+          <img src="cert2.jpg" alt="Internship Certificate">
+          <h4>2 Months Internship</h4>
+          <p>Composite Manufacturing & FMEA</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flash-card">
+      <div class="flash-inner">
+
+        <div class="flash-front">
+          <h3>NIT Jamshedpur</h3>
+          <p>FSW Research Project</p>
+          <span>Click to View</span>
+        </div>
+
+        <div class="flash-back">
+          <img src="cert3.jpg" alt="FSW Certificate">
+          <h4>Research Certification</h4>
+          <p>Friction Stir Welding Optimization</p>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </section>
-
 
 <!-- Certificate Popup -->
 <div id="popup">
@@ -216,6 +238,7 @@ Graduate Engineer Trainee at Tata Advanced Systems Ltd with strong expertise in 
 
 </body>
 </html>
+
 
 
 
