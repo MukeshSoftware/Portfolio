@@ -1,324 +1,233 @@
-/* ===============================
-   GLOBAL SETTINGS
-================================ */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  font-family: Arial;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #020617;
-  color: #e5e7eb;
-  line-height: 1.6;
+  background: linear-gradient(to right,#020617,#0f172a);
+  color: white;
 }
 
-/* ===============================
-   NAVBAR
-================================ */
-
+/* Navbar */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(2,6,23,0.95);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 8%;
-  z-index: 1000;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
-}
-
-nav h2 {
-  color: #38bdf8;
+  padding: 20px 60px;
+  background: #020617;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #e5e7eb;
-  font-weight: 500;
+  color: white;
 }
 
-nav ul li a:hover {
-  color: #38bdf8;
-}
-
-/* ===============================
-   HERO SECTION
-================================ */
-
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero-content h1 span {
-  color: #38bdf8;
-}
-
-.hero-content p {
-  margin: 15px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 6px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #0ea5e9;
-}
-
-/* ===============================
-   SECTIONS
-================================ */
-
-section {
-  padding: 80px 8%;
-}
-
-section h2 {
-  font-size: 28px;
-  color: #38bdf8;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* ===============================
-   ABOUT
-================================ */
-
-#about p {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-/* ===============================
-   SKILLS
-================================ */
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.skill {
-  background: #0f172a;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 14px;
-  border: 1px solid #38bdf8;
-}
-
-/* ===============================
-   EXPERIENCE CARDS
-================================ */
-
-.exp-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-}
-
-.exp-card {
-  background: #0f172a;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-  transition: 0.4s;
-}
-
-.exp-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 15px 30px rgba(56,189,248,0.2);
-}
-
-.exp-card h3 {
-  color: #38bdf8;
-}
-
-/* ===============================
-   PROJECTS
-================================ */
-
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 25px;
-}
-
-.project-card {
-  background: #0f172a;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
-}
-
-/* ===============================
-   FLASH CERTIFICATE CARDS
-================================ */
-
-.flash-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 25px;
-}
-
-.flash-card {
-  perspective: 1200px;
-}
-
-.flash-inner {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-}
-
-.flash-card:hover .flash-inner {
-  transform: rotateY(180deg);
-}
-
-.flash-front,
-.flash-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
-}
-
-/* FRONT */
-
-.flash-front {
-  background: linear-gradient(135deg,#020617,#1e3a8a);
+/* Hero */
+.hero {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 0 60px;
 }
 
-.flash-front h3 {
+.hero span {
+  color: #38bdf8;
+}
+.hero {
+  background: linear-gradient(120deg,#020617,#1e3a8a);
+}
+
+
+.hero button {
+  margin-top: 20px;
+  width: 200px;
+  padding: 10px;
+  border: none;
+  background: #38bdf8;
+  cursor: pointer;
+}
+
+/* Section */
+section {
+  padding: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skill {
+  margin-bottom: 15px;
+}
+
+.bar {
+  background: #1e293b;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.fill {
+  background: #38bdf8;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Projects */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Experience Section */
+
+.timeline {
+  margin-top: 20px;
+}
+
+.experience-card {
+  background: #020617;
+  padding: 25px;
+  border-left: 4px solid #38bdf8;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.experience-card h3 {
   color: #38bdf8;
 }
 
-.flash-front span {
-  margin-top: 10px;
-  font-size: 13px;
+.experience-card h4 {
+  margin: 5px 0;
+}
+
+.experience-card span {
+  font-size: 14px;
   color: #94a3b8;
 }
 
-/* BACK */
-
-.flash-back {
-  background: linear-gradient(135deg,#0f172a,#020617);
-  transform: rotateY(180deg);
-  text-align: center;
+.experience-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
 }
 
-.flash-back img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 2px solid #38bdf8;
+.experience-card ul li {
+  margin-bottom: 8px;
 }
-
-.flash-back h4 {
-  color: #38bdf8;
-}
-
-/* ===============================
-   CONTACT
-================================ */
-
-#contact form {
-  max-width: 500px;
-  margin: auto;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: none;
-}
-
-#contact button {
-  width: 100%;
-  padding: 10px;
-  background: #38bdf8;
-  border: none;
+/* Resume Button */
+.resume-btn {
+  background: #0ea5e9;
+  color: white;
   border-radius: 6px;
   font-weight: bold;
 }
 
-/* ===============================
-   FOOTER
-================================ */
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-  border-top: 1px solid #1e293b;
-}
-
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
-
-@media(max-width:768px) {
-
+/* Sticky Navbar */
 nav {
-  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-#home {
+/* Stats Section */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
 }
 
-.flash-inner {
-  height: 280px;
+.stat-box {
+  background: #020617;
+  padding: 30px;
+  border-radius: 12px;
+  width: 200px;
 }
 
-.flash-back img {
-  height: 140px;
+.stat-box h1 {
+  color: #38bdf8;
 }
 
+/* Timeline Animation */
+.experience-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
 
+.experience-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Cards */
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* Certificates */
+
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: linear-gradient(135deg,#020617,#0f172a);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #0ea5e9;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+button {
+  background: linear-gradient(135deg,#0ea5e9,#2563eb);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 /* Hero Layout */
 
 .hero-content {
@@ -354,5 +263,4 @@ nav {
 }
 
 }
-
 
